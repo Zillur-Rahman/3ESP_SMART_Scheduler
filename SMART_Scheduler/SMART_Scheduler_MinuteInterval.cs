@@ -403,10 +403,10 @@ namespace SMART_Scheduler
                             else
                                 cIntMinuteCounterToCallbKashAPI = 0;
 
-                            //this.WriteProcessLog("\nDownloading bKash Transaction for RSF (in 5 minutes interval)"); 
+                            this.WriteProcessLog("\nDownloading bKash Transaction for RSF (in 5 minutes interval)");
                             //this.SMART_Scheduler_SendScheduledSMS("DAILYMORSMS2CUST");
                             //this.SMART_Scheduler_SendScheduledSMS("DAILYEVESMS2CUST");
-                            //this.SMART_Scheduler_DownloadDataFrombKashAPIforRSF();
+                            this.SMART_Scheduler_DownloadDataFrombKashAPIforRSF();
 
                             this.WriteProcessLog("\nDownloading bKash Transaction for RRE (in 5 minutes interval)");
                             this.SMART_Scheduler_DownloadDataFrombKashAPIforRRE();
@@ -819,6 +819,7 @@ namespace SMART_Scheduler
                     //MessageBox.Show(intSMSCount.ToString().Trim() + " SMS has been sent successfully.", "RASolarERP Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.WriteProcessLog("\nTransaction: " + intTransCount.ToString().Trim() + " Transaction have been downloaded successfully.");
                 }
+                this.WriteProcessLog("\nNo of Transactions: " + intTransCount.ToString().Trim() + ", StartTime: " + strStartDateTime + ", EndTime:" + Convert.ToDateTime(strStartDateTime).AddMinutes(30).ToString("yyyy-MM-dd HH:mm:ss"));
                 //else
                 //{
                 //    //MessageBox.Show("Failed to send SMS!", "RASolarERP Data", MessageBoxButtons.OK, MessageBoxIcon.Information);
