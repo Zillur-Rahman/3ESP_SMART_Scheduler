@@ -403,10 +403,10 @@ namespace SMART_Scheduler
                             else
                                 cIntMinuteCounterToCallbKashAPI = 0;
 
-                            this.WriteProcessLog("\nDownloading bKash Transaction for RSF (in 5 minutes interval)");
+                            //this.WriteProcessLog("\nDownloading bKash Transaction for RSF (in 5 minutes interval)");
                             //this.SMART_Scheduler_SendScheduledSMS("DAILYMORSMS2CUST");
                             //this.SMART_Scheduler_SendScheduledSMS("DAILYEVESMS2CUST");
-                            this.SMART_Scheduler_DownloadDataFrombKashAPIforRSF();
+                            //this.SMART_Scheduler_DownloadDataFrombKashAPIforRSF();
 
                             this.WriteProcessLog("\nDownloading bKash Transaction for RRE (in 5 minutes interval)");
                             this.SMART_Scheduler_DownloadDataFrombKashAPIforRRE();
